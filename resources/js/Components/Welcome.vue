@@ -21,8 +21,8 @@ export default {
                 {{ $page.props }}
             </p>
 
-            <button v-if="hasPermission('create roles')">Manage Roles</button>
-            <button v-if="hasPermission('create lessons')">Manage Lessons</button>
+            <button class="test" v-if="hasPermission('create roles')">Manage Roles</button>
+            <button class="test" v-if="hasPermission('create lessons')">Manage Lessons</button>
 
         </div>
   
@@ -31,7 +31,7 @@ export default {
 </template>
 
 <style>
-    button {
+    button.test {
         background-color: rgb(34, 67, 255);
         color: white;
         border: 1px solid black;
