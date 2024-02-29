@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+    const NUMBER_OF_ITEMS_PER_PAGE = 25;
     public function index(): Response
     {
-        define('NUMBER_OF_ITEMS_PER_PAGE', 25);
-        $categories = Category::paginate(NUMBER_OF_ITEMS_PER_PAGE);
+        $categories = Category::paginate(self::NUMBER_OF_ITEMS_PER_PAGE);
 
         return inertia('Categories/Index', [
             'categories' => $categories
