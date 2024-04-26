@@ -48,6 +48,10 @@ class CategoryController extends Controller
         return redirect()->route('categories.index');
     }
 
+    /**
+     * @param Category $category
+     * @return \Illuminate\Http\Response
+     */
     public function destroy(Category $category)
     {
         $category->delete();
